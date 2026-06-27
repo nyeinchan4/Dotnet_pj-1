@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\azureuser\\source\\repos\\Dotnet_pj-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE0DC327-AAB3-47C5-A1D5-0CE18FF8E2CD}|Dotnet_pj-1\\Dotnet_pj-1.fsproj|c:\\users\\azureuser\\source\\repos\\dotnet_pj-1\\dotnet_pj-1\\dotnet_pj-1.fsproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{BE0DC327-AAB3-47C5-A1D5-0CE18FF8E2CD}|Dotnet_pj-1\\Dotnet_pj-1.fsproj|solutionrelative:dotnet_pj-1\\dotnet_pj-1.fsproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{9FACDC71-4F6E-B5EE-E8BA-BEA089207389}|Dotnet_pj-1\\Dotnet_pj-1.fsproj|c:\\users\\azureuser\\source\\repos\\dotnet_pj-1\\dotnet_pj-1\\dotnet_pj-1.fsproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9FACDC71-4F6E-B5EE-E8BA-BEA089207389}|Dotnet_pj-1\\Dotnet_pj-1.fsproj|solutionrelative:dotnet_pj-1\\dotnet_pj-1.fsproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
