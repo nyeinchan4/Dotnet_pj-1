@@ -3,7 +3,7 @@ name: Build and Deploy .NET App
 on:
   push:
     branches:
-      - main # Change this to your default branch (e.g., master/develop)
+      - master # Change this to your default branch (e.g., master/develop)
 
 jobs:
   build-and-deploy:
