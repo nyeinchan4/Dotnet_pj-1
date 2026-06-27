@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Dotnet_pj-1">
+    <resource name="FSharpSignatureData.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Dotnet_pj-1" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Dotnet_pj-1" action="remove"></resource>
+  </assembly>
+</linker>
