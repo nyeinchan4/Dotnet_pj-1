@@ -1,0 +1,53 @@
+name: Build and Deploy .NET App
+
+on:
+  push:
+    branches:
+      - main # Change this to your default branch (e.g., master/develop)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Source Code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore Dependencies
+      run: dotnet restore .\Dotnet_pj-1.fsproj
+
+    - name: Build Project
+      run: dotnet build .\Dotnet_pj-1.fsproj --configuration Release
+
+    - name: Publish Project
+      run: dotnet publish .\Dotnet_pj-1.fsproj --configuration Release --output ./publish
+
+    - name: Zip the Publish Folder
+      run: |
+        cd publish
+        zip -r ../deploy-package.zip .
+        cd ..
+
+    - name: Copy Zip Package to App Server via SCP
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: "deploy-package.zip"
+        target: "/home/ubuntu/Deployment-packages"
+
+    - name: Execute Remote Deployment Script via SSH
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          # Run your deployment script
+          /home/ubuntu/deployment-script/deployment.sh
