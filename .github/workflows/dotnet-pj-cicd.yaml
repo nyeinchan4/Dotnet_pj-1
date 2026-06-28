@@ -19,13 +19,13 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore Dependencies
-      run: dotnet restore .\Dotnet_pj-1.fsproj
+      run: dotnet restore ./Dotnet_pj-1.fsproj
 
     - name: Build Project
-      run: dotnet build .\Dotnet_pj-1.fsproj --configuration Release
+      run: dotnet build ./Dotnet_pj-1.fsproj --configuration Release
 
     - name: Publish Project
-      run: dotnet publish .\Dotnet_pj-1.fsproj --configuration Release --output ./publish
+      run: dotnet publish ./Dotnet_pj-1.fsproj --configuration Release --output ./publish
 
     - name: Zip the Publish Folder
       run: |
